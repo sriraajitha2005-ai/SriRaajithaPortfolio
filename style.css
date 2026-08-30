@@ -1,3 +1,7 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -17,14 +21,15 @@ body {
 }
 
 
-/* ================= NAVBAR ================= */
+/* =========================================================
+   NAVBAR
+   ========================================================= */
 
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-
     z-index: 1000;
 
     background: rgba(255, 255, 255, 0.92);
@@ -79,7 +84,6 @@ header {
     content: "";
 
     position: absolute;
-
     left: 0;
     bottom: -7px;
 
@@ -100,7 +104,9 @@ header {
 }
 
 
-/* ================= HERO ================= */
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero {
     min-height: 100vh;
@@ -117,9 +123,6 @@ header {
     position: relative;
     overflow: hidden;
 }
-
-
-/* Background circles */
 
 .hero::before {
     content: "";
@@ -157,9 +160,6 @@ header {
     z-index: -1;
 }
 
-
-/* Hero content */
-
 .hero-content {
     max-width: 650px;
 }
@@ -177,7 +177,6 @@ header {
 
 .hero h1 {
     font-size: 64px;
-
     line-height: 1.15;
 
     color: #172033;
@@ -210,11 +209,12 @@ header {
 }
 
 
-/* Buttons */
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
 .buttons {
     display: flex;
-
     gap: 15px;
 
     margin-top: 30px;
@@ -265,11 +265,12 @@ header {
 }
 
 
-/* ================= PROFILE ================= */
+/* =========================================================
+   PROFILE
+   ========================================================= */
 
 .profile-container {
     position: relative;
-
     margin-right: 30px;
 }
 
@@ -305,7 +306,9 @@ header {
 }
 
 
-/* ================= SECTIONS ================= */
+/* =========================================================
+   SECTIONS
+   ========================================================= */
 
 .section {
     max-width: 1200px;
@@ -377,7 +380,9 @@ header {
 }
 
 
-/* ================= ABOUT ================= */
+/* =========================================================
+   ABOUT
+   ========================================================= */
 
 .about-content {
     max-width: 950px;
@@ -432,7 +437,9 @@ header {
 }
 
 
-/* ================= EDUCATION ================= */
+/* =========================================================
+   EDUCATION
+   ========================================================= */
 
 .education-container {
     max-width: 1100px;
@@ -517,7 +524,9 @@ header {
 }
 
 
-/* ================= SKILLS ================= */
+/* =========================================================
+   TECHNICAL SKILLS
+   ========================================================= */
 
 .skills-container {
     display: grid;
@@ -586,20 +595,30 @@ header {
 }
 
 
-/* ================= PROJECTS ================= */
+/* =========================================================
+   PROJECT
+   CENTERED ONLINE QUIZ MANAGEMENT SYSTEM
+   ========================================================= */
 
-.project-container {
-    display: grid;
+.project-center {
+    width: 100%;
 
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
 
-    gap: 25px;
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 0 auto;
 }
 
 .project-card {
     position: relative;
 
-    padding: 35px;
+    width: 100%;
+    max-width: 800px;
+
+    padding: 40px;
 
     background: #1a2234;
 
@@ -610,6 +629,8 @@ header {
     transition: 0.3s;
 
     overflow: hidden;
+
+    text-align: center;
 }
 
 .project-card::before {
@@ -647,9 +668,9 @@ header {
 }
 
 .project-card h3 {
-    font-size: 23px;
+    font-size: 25px;
 
-    margin: 12px 0;
+    margin: 14px 0;
 }
 
 .project-card p {
@@ -657,19 +678,44 @@ header {
 
     font-size: 14px;
 
-    line-height: 1.8;
+    line-height: 1.9;
+
+    max-width: 680px;
+
+    margin: 0 auto;
 }
 
+.project-tech-title {
+    color: #ffffff;
+
+    font-size: 16px;
+
+    margin-top: 25px;
+
+    margin-bottom: 8px;
+}
+
+
+/* TECHNOLOGY TAGS */
+
 .tags {
-    margin-top: 22px;
+    margin-top: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
 }
 
 .tags span {
     display: inline-block;
 
-    padding: 5px 11px;
-
-    margin: 3px;
+    padding: 7px 13px;
 
     border-radius: 20px;
 
@@ -680,23 +726,43 @@ header {
     font-size: 11px;
 
     font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.tags span:hover {
+    background: #6c4df6;
+
+    color: white;
+
+    transform: translateY(-2px);
 }
 
 
-/* ================= INTERNSHIP ================= */
+/* =========================================================
+   INTERNSHIPS
+   ========================================================= */
 
-.internship-box {
-    max-width: 850px;
+.internship-container {
+    max-width: 1000px;
 
     margin: auto;
 
-    padding: 40px;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.internship-card {
+    padding: 35px;
 
     display: flex;
 
     align-items: flex-start;
 
-    gap: 25px;
+    gap: 22px;
 
     background: white;
 
@@ -709,14 +775,17 @@ header {
     transition: 0.3s;
 }
 
-.internship-box:hover {
-    transform: translateY(-5px);
+.internship-card:hover {
+    transform: translateY(-7px);
 
     border-color: #c8bfff;
+
+    box-shadow: 0 15px 35px rgba(108, 77, 246, 0.1);
 }
 
 .internship-icon {
     min-width: 65px;
+    width: 65px;
     height: 65px;
 
     display: flex;
@@ -731,26 +800,58 @@ header {
     font-size: 30px;
 }
 
-.internship-box h3 {
+.internship-content {
+    flex: 1;
+}
+
+.internship-content h3 {
     color: #6c4df6;
 
-    font-size: 21px;
+    font-size: 20px;
+
+    line-height: 1.4;
+
+    margin-bottom: 6px;
+}
+
+.internship-content h4 {
+    color: #343c4e;
+
+    font-size: 14px;
 
     margin-bottom: 10px;
 }
 
-.internship-box p {
+.internship-content p {
     color: #70798b;
 
-    font-size: 14px;
+    font-size: 13px;
 
     line-height: 1.8;
 
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+}
+
+.internship-type {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    background: #f0edff;
+
+    color: #6c4df6;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
 }
 
 
-/* ================= ACHIEVEMENTS ================= */
+/* =========================================================
+   ACHIEVEMENTS
+   ========================================================= */
 
 .achievement-container {
     display: grid;
@@ -811,7 +912,9 @@ header {
 }
 
 
-/* ================= LANGUAGES ================= */
+/* =========================================================
+   LANGUAGES
+   ========================================================= */
 
 .languages {
     max-width: 700px;
@@ -868,7 +971,9 @@ header {
 }
 
 
-/* ================= CONTACT ================= */
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .contact-section {
     padding: 100px 25px;
@@ -966,7 +1071,9 @@ header {
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
     padding: 25px;
@@ -985,7 +1092,9 @@ footer p:first-child {
 }
 
 
-/* ================= RESPONSIVE ================= */
+/* =========================================================
+   RESPONSIVE - 1000px
+   ========================================================= */
 
 @media (max-width: 1000px) {
 
@@ -1009,7 +1118,9 @@ footer p:first-child {
 }
 
 
-/* ================= TABLET ================= */
+/* =========================================================
+   RESPONSIVE - 800px
+   ========================================================= */
 
 @media (max-width: 800px) {
 
@@ -1043,13 +1154,34 @@ footer p:first-child {
         margin-right: 0;
     }
 
+
     .about-content,
     .education-container,
-    .project-container,
     .skills-container,
     .achievement-container {
         grid-template-columns: 1fr;
     }
+
+
+    /* Internship becomes one column */
+
+    .internship-container {
+        grid-template-columns: 1fr;
+
+        max-width: 700px;
+    }
+
+
+    /* Project remains centered */
+
+    .project-center {
+        width: 100%;
+    }
+
+    .project-card {
+        max-width: 700px;
+    }
+
 
     .languages {
         grid-template-columns: 1fr;
@@ -1058,7 +1190,9 @@ footer p:first-child {
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================================================
+   RESPONSIVE - 500px
+   ========================================================= */
 
 @media (max-width: 500px) {
 
@@ -1069,6 +1203,7 @@ footer p:first-child {
     .logo {
         font-size: 21px;
     }
+
 
     .hero {
         padding: 110px 20px 70px;
@@ -1086,10 +1221,12 @@ footer p:first-child {
         font-size: 13px;
     }
 
+
     .profile-circle {
         width: 220px;
         height: 220px;
     }
+
 
     .section {
         padding: 75px 20px;
@@ -1099,6 +1236,7 @@ footer p:first-child {
         font-size: 31px;
     }
 
+
     .buttons {
         flex-direction: column;
     }
@@ -1106,6 +1244,7 @@ footer p:first-child {
     .btn {
         width: 100%;
     }
+
 
     .about-card,
     .project-card,
@@ -1115,11 +1254,36 @@ footer p:first-child {
         padding: 25px;
     }
 
-    .internship-box {
+
+    /* Centered project on mobile */
+
+    .project-card {
+        width: 100%;
+
+        padding: 28px 20px;
+    }
+
+    .project-card h3 {
+        font-size: 21px;
+    }
+
+
+    /* Internship */
+
+    .internship-card {
         flex-direction: column;
 
         padding: 30px;
+
+        text-align: center;
+
+        align-items: center;
     }
+
+    .internship-content {
+        width: 100%;
+    }
+
 
     .contact-section h2 {
         font-size: 34px;
