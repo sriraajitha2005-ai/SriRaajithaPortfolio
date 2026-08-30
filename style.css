@@ -1124,27 +1124,6 @@ footer p:first-child {
     .contact-section h2 {
         font-size: 34px;
     }
-    
-
-/* =====================================================
-   CENTER SINGLE PROJECT
-   ===================================================== */
-
-#projects .project-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-}
-
-#projects .project-card {
-    width: 100% !important;
-    max-width: 750px !important;
-    margin: 0 auto !important;
-}
-
 
 }
 
