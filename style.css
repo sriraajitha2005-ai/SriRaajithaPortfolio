@@ -1124,14 +1124,14 @@ footer p:first-child {
     .contact-section h2 {
         font-size: 34px;
     }
-    ```css
+    
 /* ================= PROJECT CENTER ================= */
 
 .project-container {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 .project-card {
@@ -1139,6 +1139,9 @@ footer p:first-child {
     max-width: 700px;
     margin: 0 auto;
 }
+
+
+
 
 }
 
